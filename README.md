@@ -27,51 +27,52 @@ This project is ideal for learning Django's MVC (MVT) architecture while buildin
 📁 Project Structure--
 Chocolate-Shop-Web-App-by-DJANGO/
 │
-├── Hello/                         # Main Django project folder
+├── manage.py                     # Django CLI entry point
+├── requirements.txt              # Project dependencies
+├── README.md                     # Project documentation
+├── .gitignore                    # Git ignored files
+│
+├── config/                       # Main Django project (settings & URLs)
 │   ├── __init__.py
 │   ├── asgi.py
-│   ├── settings.py                # Global Django settings
-│   ├── urls.py                    # Root URL configuration
+│   ├── settings.py               # Global Django settings
+│   ├── urls.py                   # Root URL configuration
 │   └── wsgi.py
 │
-├── home/                          # Django App (Handles pages/views)
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── migrations/
-│   │   └── __init__.py
-│   ├── models.py                  # Database models
-│   ├── tests.py
-│   ├── urls.py                    # App-level URL routes
-│   └── views.py                   # All view functions
+├── apps/
+│   └── home/                     # Core application
+│       ├── __init__.py
+│       ├── admin.py
+│       ├── apps.py
+│       ├── models.py             # Database models
+│       ├── views.py              # View logic
+│       ├── urls.py               # App-level URLs
+│       ├── tests.py
+│       └── migrations/
+│           └── __init__.py
 │
-├── static/                        # Static assets (images, CSS, JS)
-│   └── img/
-│       ├── chocolate_img.jpeg
-│       ├── chocolate_tray_img.jpeg
-│       ├── chocolate1.avif
-│       ├── chocolate2.avif
-│       ├── chocolate3.avif
-│       ├── chocolate4.avif
-│       ├── chocolate5.avif
-│       ├── chocolate6.avif
-│       ├── chocolate7.avif
-│       ├── chocolate8.avif
-│       ├── chocolate9.avif
-│       ├── contact.avif.jpg
-│       └── shop_img.jpeg
-│
-├── templates/                     # HTML templates for frontend
+├── templates/                    # HTML templates
 │   ├── base.html
 │   ├── index.html
 │   ├── about.html
 │   ├── services.html
 │   └── contact.html
 │
-├── db.sqlite3                     # Main database file
-├── db.sqlite3.backup              # Backup database
-├── manage.py                      # Django command-line utility
-└── README.md
+├── static/                       # Static assets
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── images/
+│       ├── chocolate_img.jpeg
+│       ├── chocolate_tray_img.jpeg
+│       ├── shop_img.jpeg
+│       └── chocolate1.avif
+│
+├── media/                        # Uploaded files (future use)
+│
+└── db.sqlite3                    # SQLite database
+
 
 ⚙️ Installation & Setup--
 1️⃣ Clone the repository-
